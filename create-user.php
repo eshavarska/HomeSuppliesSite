@@ -24,9 +24,11 @@
 
 
  if ($conn->query($query) === TRUE) {
-    echo "Успешно създаден профил ";
+    if ($_SESSION["lang"] == "BG"){echo "Успешно създаден профил.";}
+    else{echo "Your profile was created successfully.";}
 } else {
-	echo "Неуспешно създаден профил";
+    if ($_SESSION["lang"] == "BG"){echo "Неуспешно създаден профил.";}
+    else{echo "Your profile was not created successfully.";}
 }
 
 ?>
