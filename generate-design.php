@@ -125,7 +125,7 @@ function generateNavBarRight () {
                         <li><a class="vhod" style="color: #34282C" href="login.php">'.$dictionary["Login"].'</a></li>
                        <li><a class="vhod" style="color: #34282C" href="registration.php">'.$dictionary["Register"].'</a></li>';
     }else {
-        $loginButtons=' <li><a style="color: #f1ddcf" href="checkout.php"><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>' .$dictionary[Checkout].'</a></li> 
+        $loginButtons=' <li><a style="color: #f1ddcf" href="checkout.php"><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>' .$dictionary["Checkout"].'</a></li> 
                         <li><a class="vhod" style="color: #34282C" onClick= "logOut()">LOG OUT</a></li>';
     
     }        

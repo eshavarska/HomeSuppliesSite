@@ -53,12 +53,12 @@ function updateCheckOutCOntetn(sessionData) {
     
     $(".div-3").append('<div class="container1"><div class="column1 column-one kol">'+ greetingString + cartValue.toFixed(2) + " " + currencyString  + "</br></br>" + paymentString +'</div></div><br>');
 
-    if (cartValue>100) {
+    if (cartValue<100) {
       $(".div-3").append('<div id="button-div" class="container1"><div class="column1 column-one kol">'+ 
                           '<a class="vhod" style="color: #34282C" href="success.php" ><button class="payButton"  ><span class="glyphicon glyphicon-shopping-cart " aria-hidden="true" ></span>'+ payOnDelivery +' </button></a>'+
                         '</div></div></div><br>');
   
-    } 
+    }   
 
       $(".div-3").append('<div id="button-div" class="container1"><div class="column1 column-one kol">' 
                              +'<a class="vhod" style="color: #34282C"  ><button id="card-button" class="payButton"  ><span class="glyphicon glyphicon-shopping-cart " aria-hidden="true" ></span>'+ "Visa/Maestro/MasterCard" +' </button></a>'
