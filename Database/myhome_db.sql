@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2021 at 09:11 PM
+-- Generation Time: Feb 02, 2021 at 11:25 PM
 -- Server version: 8.0.22
 -- PHP Version: 8.0.0
 
@@ -68,7 +68,7 @@ CREATE TABLE `categories` (
 INSERT INTO `categories` (`id`, `nameBG`, `nameEN`, `imagePath`) VALUES
 (1, 'За кухнята', 'Kitchen', 'images/kitchen.png'),
 (2, 'За банята', 'Bathroom', 'images/bath.png'),
-(3, 'За дома', 'House', 'images/home.png');
+(3, 'За дома', 'Home', 'images/home.png');
 
 -- --------------------------------------------------------
 
@@ -102,7 +102,10 @@ CREATE TABLE `orders` (
 INSERT INTO `orders` (`id`, `status`, `value`, `userID`) VALUES
 (11, 'Vladislav Petrov', 163, 17),
 (13, 'Vladislav Petrov', 957, 17),
-(14, 'Vladislav Petrov', 106, 17);
+(14, 'Vladislav Petrov', 106, 17),
+(16, 'Elena Shavarska', 1343, 32),
+(17, 'Elena Shavarska', 31, 32),
+(18, 'A', 31, 34);
 
 -- --------------------------------------------------------
 
@@ -161,7 +164,9 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `email`, `password`, `salt`) VALUES
 (17, 'Vladislav', 'Petrov', 'petrov.vladislav@gmail.com', '$2y$10$pLDduItN6t3kSQUGOoBnLOVBADP0DG22U7AqlxVFGBCqkFd1fvyz2', '9Ŏ\"?*?$?2?E9?'),
-(18, 'Test', 'Test', 'Test@test.test', '$2y$10$6Bfl0ZEnYX.H0AX4NsZuROUKda/Cwh/ipesZHtMVgzoYJbTBB5h7q', '\0\0??Q?yw@??>?$b');
+(18, 'Test', 'Test', 'Test@test.test', '$2y$10$6Bfl0ZEnYX.H0AX4NsZuROUKda/Cwh/ipesZHtMVgzoYJbTBB5h7q', '\0\0??Q?yw@??>?$b'),
+(32, 'Elena', 'Shavarska', 'el@abv.bg', '$2y$10$lrrwD5feJBHi0sAdG6bnUODW2XHJLwjTZ5tl/a.DCPUCeihF09gdS', 'i9xLoTNINXe3zic9LoB8IQ=='),
+(34, 'Susan', 'Jones', 'susan@test.com', '$2y$10$8PHyxTzLlMoG28Te2bBy8uKVFqnMfL7IAgNHx24rLoGYjShHGe91i', 'JZCcpf3yktrJbo6tEiuejw==');
 
 --
 -- Indexes for dumped tables
@@ -227,7 +232,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `products`
@@ -239,7 +244,7 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` bigint NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- Constraints for dumped tables
