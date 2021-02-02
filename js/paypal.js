@@ -47,7 +47,7 @@ function renderStripe(orderValue) {
         //var orderValue = 25000;
         var orderId = "";
         var ajaxCallToA = $.ajax({
-          url: '/stripe/create-checkout-session.php',
+          url: './stripe/create-checkout-session.php',
           timeout: 2000,
           type: 'POST',
           data: { price: orderValue, orderId:orderId },

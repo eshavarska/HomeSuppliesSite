@@ -11,24 +11,20 @@ include 'db-connect.php';
         
 
         if ($_SESSION["lang"]=="BG") {
-             $sql = "SELECT * FROM products WHERE nameBG LIKE '%" . $Search . "%' ";     
+            $sql = "SELECT id, nameBG AS name FROM products WHERE nameBG LIKE '%" . $Search . "%' ";     
+            $sql2 = "SELECT id, nameBG AS name FROM articles WHERE (nameBG LIKE '%" . $Search . "%' OR contentBG LIKE '%" . $Search . "%') ";
         } else {
-            $sql = "SELECT * FROM products WHERE nameEN LIKE '%" . $Search . "%' ";     
+            $sql = "SELECT id, nameEN AS name FROM products WHERE nameEN LIKE '%" . $Search . "%' ";     
+            $sql2 = "SELECT id, nameEN AS name FROM articles WHERE (nameEN LIKE '%" . $Search . "%' OR contentEN LIKE '%" . $Search . "%') ";   
         }
        
-        $sql2 = "SELECT * FROM articles WHERE (name LIKE '%" . $Search . "%' OR content LIKE '%" . $Search . "%') ";
-
+        
         $resultProducts = mysqli_query($conn,$sql);
         $resultsArticles = mysqli_query($conn,$sql2);
 
         if(mysqli_num_rows($resultProducts)){
             while($row = mysqli_fetch_assoc($resultProducts)){
-            if ($_SESSION["lang"]=="BG") {
-                echo '<li><a href="product.php?id=' .$row['id']. '" class="list-group list-group-item-action">'.$row['nameBG'].'</a></li>';     
-            } else {
-                echo '<li><a href="product.php?id=' .$row['id']. '" class="list-group list-group-item-action">'.$row['nameEn'].'</a></li>';     
-            }
-                
+                echo '<li><a href="product.php?id=' .$row['id']. '" class="list-group list-group-item-action">'.$row['name'].'</a></li>';     
             }
         }
         if(mysqli_num_rows($resultsArticles)){
