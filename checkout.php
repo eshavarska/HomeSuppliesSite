@@ -4,13 +4,13 @@
         $productsString = 'Продукти';
         $quanityString = 'Количество';
         $priceString = 'Цена';
-        $logedInNeeded = "Само регистрирани потребители могат да праявт поръчки";
+        $logedInNeeded = "<p class='p12'>Само регистрирани потребители могат да правят поръчки.</p>";
     } 
     else {
         $productsString = 'Products';
         $quanityString = 'Quantity';
         $priceString = 'Price'; 
-        $logedInNeeded = "Checkout is available only for loggedIN users";  
+        $logedInNeeded = "<p class='p12'>Checkout is available only for logged in users.</p>";  
 
     }
 
