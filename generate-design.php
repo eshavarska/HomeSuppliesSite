@@ -18,6 +18,7 @@ require ("db-data.php");
      $dictionaryBG["Offers"] = "ОФЕРТИ";
      $dictionaryBG["FAQ"] = "ЧЗВ";
      $dictionaryBG["Map"] = "КАРТА";
+     $dictionaryBG["Logout"] = "ИЗХОД";
 
      $dictionaryEN["Home"] = "HOME";
      $dictionaryEN["Welcome"] = "Welcome";
@@ -36,7 +37,7 @@ require ("db-data.php");
      $dictionaryEN["Offers"] = "OFFERS";
      $dictionaryEN["FAQ"] = "FAQ";
      $dictionaryEN["Map"] = "MAP";
-
+     $dictionaryEN["Logout"] = "LOG OUT";
   
     
     if (!isset( $_SESSION["lang"])){
@@ -119,6 +120,7 @@ function generateNavBar() {
 
 function generateNavBarRight () {
     $dictionary = $_SESSION["dictionary"];
+
     echo $_SESSION["userID"];
     if ($_SESSION["userID"] == "") {
         $loginButtons='
@@ -126,7 +128,7 @@ function generateNavBarRight () {
                        <li><a class="vhod" style="color: #34282C" href="registration.php">'.$dictionary["Register"].'</a></li>';
     }else {
         $loginButtons=' <li><a style="color: #f1ddcf" href="checkout.php"><span class="glyphicon glyphicon-credit-card" aria-hidden="true"></span>' .$dictionary["Checkout"].'</a></li> 
-                        <li><a class="vhod" style="color: #34282C" onClick= "logOut()">LOG OUT</a></li>';
+                        <li><a class="vhod" style="color: #34282C" onClick= "logOut()">' .$dictionary["Logout"]. '</a></li>';
     
     }        
         echo <<<navBarRight

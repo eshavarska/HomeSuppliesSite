@@ -3,7 +3,7 @@
     $username = $_SESSION["username"];
     $cartValue = $_SESSION["cartValue"];
     $userID = $_SESSION["userID"];
-    if ($_SESSION["userID"]=""){
+    if ($_SESSION["userID"]==""){
             $userID ="0";
 
         }
