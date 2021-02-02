@@ -61,7 +61,7 @@
                                     </div>
                                     <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                                       <div class="panel-body">     
-                                        <h4 class="qna1">'.$productData->longDescription.'
+                                        <h4 class="qna1">'.$productData->shortDescription.'
                                             
                                         </h4>
                                       </div>
