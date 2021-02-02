@@ -6,7 +6,7 @@
         $login = 'Създай профил!';
     } 
     else {
-        $login = 'Please enter you r login details:';
+        $login = 'Please enter your login details:';
         $password = 'password:';
     }
 
