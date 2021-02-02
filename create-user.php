@@ -12,11 +12,12 @@
  $lastName = stripslashes($lastName);
  $lastName = mysqli_real_escape_string($conn, $lastName);
 
- $salt = random_bytes ( 16 );
+ $salt = base64_encode(random_bytes (16));
  //$salt = sprintf("$2a$%02d$", 10) . $salt;
  
 
  $pass = password_hash($pass, PASSWORD_DEFAULT);;
+ 
 
  $query = "INSERT into `users` (firstName, lastName, email, password, salt) VALUES ('$firstName', '$lastName', '$email', '$pass', '$salt')";
  //echo $query;
