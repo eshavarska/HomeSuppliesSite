@@ -81,17 +81,27 @@
 	}
 
 	function getArticles() {
-		    global $conn;
-		    $articles = $conn->query("SELECT id, name, imagePath FROM articles")->fetch_all(MYSQLI_ASSOC);
-    		return  json_encode($articles,  JSON_UNESCAPED_UNICODE);
+			global $conn;
+			if ($_SESSION["lang"]=="BG") {
+				$articles = $conn->query("SELECT id, nameBG AS name, imagePath FROM articles")->fetch_all(MYSQLI_ASSOC);
+    			return  json_encode($articles,  JSON_UNESCAPED_UNICODE);
+			}else{
+				$articles = $conn->query("SELECT id, nameEN AS name, imagePath FROM articles")->fetch_all(MYSQLI_ASSOC);
+    			return  json_encode($articles,  JSON_UNESCAPED_UNICODE);
+			}
+		    
 	}
 
 	function getArticle($articleID) {
-		    global $conn;
-		    $article = $conn->query("SELECT * FROM articles WHERE id=" . $articleID)->fetch_assoc();
-    		$article["similarArticles"] =  $conn->query("SELECT name, id, imagePath FROM articles WHERE NOT id=" . $articleID)->fetch_all(MYSQLI_ASSOC);
-
-    		return  json_encode($article,  JSON_UNESCAPED_UNICODE);
+			global $conn;
+			if ($_SESSION["lang"]=="BG") {
+		    $article = $conn->query("SELECT nameBG AS name, contentBG AS content, authorBG AS author, imagePath, imagePath2 FROM articles WHERE id=" . $articleID)->fetch_assoc();
+			return  json_encode($article,  JSON_UNESCAPED_UNICODE);
+			}else{
+				$article = $conn->query("SELECT id, nameEN AS name, contentEN AS content, authorEN AS author, imagePath, imagePath2 FROM articles WHERE id=" . $articleID)->fetch_assoc();
+				return  json_encode($article,  JSON_UNESCAPED_UNICODE);
+			}
+    		
 	}
 
 	function addToCart($productID) {

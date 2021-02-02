@@ -6,6 +6,7 @@
         $password = 'Парола:';
         $passwordAgain = 'Повтори паролата:';
         $createProfile = 'Създай профил!';
+        $topText = "Направете своята регистрация: ";
     } 
     else {
         $firstName = 'First name:';
@@ -13,6 +14,7 @@
         $password = 'Password:';
         $passwordAgain = 'Password again:';
         $createProfile = 'Create profile!';
+        $topText = "Create your account: ";
     }
 
 
@@ -23,7 +25,7 @@ $contentDivHTML = '
 
     <div class="container">
 
-                            <h1 class="col-md-11 col-sm-4 col-xs-10" align="center" style="font-family: Cambria;"> Направете своята регистрация: </h1> 
+                            <h1 class="col-md-11 col-sm-4 col-xs-10" align="center" style="font-family: Cambria;">'.$topText.'</h1> 
                             <div class="col-md-7 col-sm-4 col-xs-10" align="right"> <br>
                 <form id="createform" name="registration" action="wat.php" method="post">    
                     <label for="item1">'.$firstName.' </label>

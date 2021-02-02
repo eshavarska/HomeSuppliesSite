@@ -1,11 +1,13 @@
 <?php
     require ("generate-design.php");
     if ($_SESSION["lang"] == "BG") {
+        $headerText = "ЗА НАС";
         $description1 = 'Ние сме млад и динамичен екип от петима човека, които искаха да създадат нещо полезно за забързаното ежедневие на всяка жена! Така се роди и нашия първи бранд MyHo.me, чрез който доставяме ежедневно висококачествени продукти за дома на всяка жена, която няма достатъчно време, за да обикаля магазините, докато открие всичко, което и е необходимо!';
         $description2 = 'Разполагаме с широка гама продукти на известни и утвърдени фирми в областта на домашните потреби, ползващи най–новите технологии и иновации за производство на съдове за домакинството. Нашата мисия е да предоставим на клиентите си разнообразие от качествени стоки за бита на достъпни цени и с бърза доставка.';
         $description3 = 'Идеята да създадем този уеб сайт се зароди в следствие на неуморното ни желание да научаваме все повече новости от динамично променящия се свят на домашните потреби. И тъй като подхождаме към това начинание с много страст и отдаденост, сме убедени, че ще съумеем да ви бъдем полезни в избора на всички продукти, от които се нуждаете, на едно място! В магазин MyHo.me поставяме корекността и личното внимание към клиента на първо място!';
     } 
     else {
+        $headerText = "About us";
         $description1 = 'We are a young and dynamic team of five people who wanted to create something useful for the hectic daily life of every woman! Thus was born our first brand MyHo.me, through which we deliver daily high quality products for the home to every woman who does not have enough time to go around the shops until she finds everything she needs!';
         $description2 = 'We have a wide range of products of well-known and established companies in the field of household needs, using the latest technologies and innovations for the production of household utensils. Our mission is to provide our customers with a variety of quality household goods at affordable prices and with fast delivery.';
         $description3 = 'The idea to create this website arose as a result of our tireless desire to learn more and more news from the dynamically changing world of home use. And because we approach this endeavor with a lot of passion and dedication, we are convinced that we will be able to be useful in choosing all the products you need in one place! In the MyHo.me store we put honesty and personal attention to the customer first!';
@@ -19,9 +21,9 @@
 
                 <div class="row">
 
-                    <div class="div-3" class="toHide" class="col-md-7 col-sm-4 col-xs-12" style="border:solid; border-width:3px; border-color: #c9f15a">
+                    <div class="div-3" class="toHide" class="col-md-7 col-sm-4 col-xs-12" style="border:solid; border-width:3px; border-color: #c9f15a ">
 
-                        <p class="welcome-text"><b>ЗА НАС</b></p>
+                        <p class="welcome-text"><b>'. $headerText. '</b></p>
                         <hr class="new1">
                         <p class="p12" align="justify">'.$description1.'</p> 
                         <p class="p12" align="justify">'.$description2.'</p>

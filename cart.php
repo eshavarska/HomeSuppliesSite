@@ -4,11 +4,13 @@
         $productsString = 'Продукти';
         $quanityString = 'Количество';
         $priceString = 'Цена';
+        $title = "Моята количка";
     } 
     else {
         $productsString = 'Products';
         $quanityString = 'Quantity';
         $priceString = 'Price';   
+        $title = "Shopping cart";
 
     }
 
@@ -23,7 +25,7 @@
                     <div class="div-3" class="toHide" class="col-md-7 col-sm-4 col-xs-12" style="border:solid; border-width:3px; border-color: #c9f15a">
 
                         
-                        <p class="welcome-text"><b>Моята количка</b></p>
+                        <p class="welcome-text"><b>'.$title.'</b></p>
                         <hr class="new1">
                         <div class="container1">
                            <div class="column1 column-one kol">'.$productsString.'

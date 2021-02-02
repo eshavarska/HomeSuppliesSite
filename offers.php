@@ -4,10 +4,18 @@
         $descriptionString = " Описание на продукта ";
         $specificationString  = " Спецификации ";
         $priceString = " Цена ";
+        $title = "ОФЕРТИ";
+        $promo_title = "Промоции";
+        $most_sold_title = "Най-продавани";
+        $latest_title = "Последни";
     } else {
         $descriptionString = " Product descrption";
         $specificationString  = " Specifications ";
         $priceString = " Price ";
+        $title = "OFFERS";
+        $promo_title = "Promotions";
+        $most_sold_title = "Most Sold";
+        $latest_title = "Latest";
     }
 
 
@@ -24,16 +32,16 @@
 
                     <div class="div-3 toHide col-md-12 col-sm-12 col-xs-12" style="border:solid; border-width:3px; border-color: #c9f15a">
 
-                       <p class="welcome-text"><b>ОФЕРТИ</b></p>
+                       <p class="welcome-text"><b>'.$title.'</b></p>
                        <hr class="new1">
 
 
                         <div class="row">
-                           <div class="kol col-lg-4 col-md-6">Промоции
+                           <div class="kol col-lg-4 col-md-6">'.$promo_title.'
                            </div>
-                           <div class="kol col-lg-4 col-md-6">Най-продавани
+                           <div class="kol col-lg-4 col-md-6">'.$most_sold_title.'
                            </div>
-                           <div class="kol col-lg-4 col-md-6">Последни
+                           <div class="kol col-lg-4 col-md-6">'.$latest_title.'
                            </div>
                         </div>
                         <div class="row">
